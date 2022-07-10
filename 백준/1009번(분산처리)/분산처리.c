@@ -1,18 +1,20 @@
 #include <stdio.h>
-#include <math.h>
 
-int main(){
-
-    int arr[10] = 0;
-    int sw = 1;
-    int n;
-    int a,b;
+int main()
+{
+    int a,b,n,temp;
 
     scanf("%d",&n);
-
-    int temp = pow(a,b);
-
-    printf("%d",temp%10);
+    for(int i=0; i<n; i++)
+	{
+        scanf("%d %d",&a,&b);
+     	temp = a;
+		for(int j=0; j<b - 1; j++)
+		{
+     		temp = temp * a % 10;
+		}
+		printf("%d\n",temp%10);   
+    }
 
     return 0;
 }
